@@ -111,14 +111,14 @@ Finally, to subscribe to values sent into Elm, we import our `Audio` module, and
 module Main exposing(..)
 
 import Json.Decode as D
-import NumberStuff
+import Audio
 
 
 type Msg
     = TimeReceived String Float
     | PortError D.Error
-    
-    
+
+
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     Audio.in_
@@ -126,7 +126,7 @@ subscriptions _ =
             case msg of
                 Audio.TimeReceived id time ->
                     TimeReceived id time
-                
+
                 Audio.Error error ->
                     PortError error
         )
