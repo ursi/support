@@ -70,7 +70,7 @@ Note the names of the ports. Naming your ports the same name followed by either 
 The corresponding JavaScript to handle this is:
 
 ```js
-import SupPort from './SupPort.js'
+import SupPort from '@ursi/support'
 
 const app = Elm.Main.init();
 
