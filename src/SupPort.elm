@@ -12,14 +12,20 @@ import Json.Encode as E
 
 
 {-| -}
-out : (Value -> Cmd msg) -> String -> Value -> Cmd msg
-out outPort =
-    \msgName value ->
-        outPort <|
-            E.object
-                [ ( "msg", E.string msgName )
-                , ( "data", value )
-                ]
+out : (Value -> Cmd msg) -> String -> List Value -> Cmd msg
+out outPort msgName args =
+    outPort <|
+        E.object
+            [ ( "msg", E.string msgName )
+            , ( "data", encodeArgs args )
+            ]
+
+
+encodeArgs : List Value -> Value
+encodeArgs args =
+    ( "length", E.int <| List.length args )
+        :: List.indexedMap (\i arg -> ( String.fromInt i, arg )) args
+        |> E.object
 
 
 {-| -}
