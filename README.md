@@ -31,17 +31,17 @@ type Msg
 
 play : String -> Cmd msg
 play id =
-    out "Play" <| E.string id
+    out "Play" [ E.string id ]
 
 
 pause : String -> Cmd msg
 pause id =
-    out "Pause" <| E.string id
+    out "Pause" [ E.string id ]
 
 
--- the two arguments here correspond to the method name and the method argument
+-- the two arguments here correspond to the method name and the method arguments in the JS code
 -- seen in the example JS code below
-out : String -> Value -> Cmd msg
+out : String -> List Value -> Cmd msg
 out =
     SupPort.out audioOut
 
