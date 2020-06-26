@@ -132,6 +132,6 @@ subscriptions _ =
         )
 ```
 
-And you're done! Since we've mapped each port to a custom type, the compiler will make sure we cover all our incoming messages, including the mandatory error message. If you've misspelled a message on either side, you'll get an error letting you know.
+And you're done! Since we've mapped each message to a custom type, the compiler will make sure we cover all our incoming messages, including the mandatory error message. If you've misspelled a message on either side, you'll get an helpful runtime error letting you know.
 
 Special thanks to Murphy Randle for his talk [The Importance of Ports](https://www.youtube.com/watch?v=P3pL85n9_5s) which inspired the creation of this package.
