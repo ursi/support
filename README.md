@@ -1,11 +1,11 @@
 # SupPort
 
-SupPort is a small framework for Elm ports. It uses the "one port pair per actor" approach and aims to make it as delightful as possible. There is also a JavaScript component to this as well, which is available [here](https://github.com/ursi/support-js).
+SupPort is a simple framework for Elm ports. The JavaScript component is available [here](https://github.com/ursi/support-js).
 
 ### Goals
 * Reduce redundancy
 * Improve readability
-* Make using ports feel as close as possible to sending messages with values
+* Make using ports feel as close as possible to sending messages with values, as one does in Elm
 * Catch/prevent typos, as communication is string-based
 
 
