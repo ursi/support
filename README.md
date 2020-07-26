@@ -19,8 +19,8 @@ port module Audio exposing
     , play
     )
 
-import Json.Decode as D exposing (Value)
-import Json.Encode as E
+import Json.Decode as D
+import Json.Encode as E exposing (Value)
 import SupPort
 
 
